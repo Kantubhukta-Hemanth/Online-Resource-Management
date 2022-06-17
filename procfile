@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn main.wsgi --log-files -
+web: gunicorn --bind 0.0.0.0:$PORT main.wsgi
