@@ -1,0 +1,9 @@
+https://docs.microsoft.com/en-us/azure/app-service/tutorial-python-postgresql-app?tabs=django%2Cwindows%2Cazure-portal%2Cterminal-bash%2Cazure-portal-access%2Cvscode-aztools-deploy%2Cdeploy-instructions-azportal%2Cdeploy-instructions--zip-azcli%2Cdeploy-instructions-curl-bash
+
+
+https://www.projecttopics.info/Computer/driver-drowsiness-detection.php
+
+https://data-flair.training/blogs/stock-price-prediction-machine-learning-project-in-python/
+
+https://towardsdatascience.com/predicting-future-stock-market-trends-with-python-machine-learning-2bf3f1633b3c
+
