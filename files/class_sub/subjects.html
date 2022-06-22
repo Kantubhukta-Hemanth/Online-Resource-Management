@@ -29,6 +29,7 @@
             border: 2px solid black;
             padding: 15px;
         }
+
         body {
             padding-top: 60px;
         }
@@ -103,56 +104,57 @@
 
     <!-- Materials Section -->
     <section id="book" class="p-1 back" style="background-color: cyan;">
-        <div class="container">
-            {% if books %}
-            <table>
-                <div class="">
-                    <tr style="color:crimson">
-                        <th>S.No</th>
-                        <th>Subject</th>
-                        <th>Book_Name</th>
-                        <th>Group</th>
-                        <th>Semester</th>
-                        <th>Uploaded_By</th>
-                        <th>Filesize</th>
-                        <th>Get Here</th>
+        <p>
+            <hr>
+        </p>
+        {% if books %}
+        <table width="100%" class="table table-bordered table-hover">
+            <div>
+                <tr style="color:orangered; z-index:1;">
+                    <th>S.No</th>
+                    <th>Subject</th>
+                    <th>Book_Name</th>
+                    <th>Group</th>
+                    <th>Semester</th>
+                    <th>Uploaded_By</th>
+                    <th>Filesize</th>
+                    <th>Get Here</th>
 
-                    </tr>
-                </div>
-                <p></p>
-                <div>
-                    {% for book in books %}
-                    <tr>
-                        <th>{{ book.id }}</th>
-                        <th>{{ book.Subject }}</th>
-                        <th>{{ book.Book_Name }}</th>
-                        <th>{{ book.Group }}</th>
-                        <th>{{ book.Semester }}</th>
-                        <th>{{ book.Uploaded_By }}</th>
-                        <th>{{ book.Filesize }}</th>
-                        <th><a href="{{baseUrl}}/media/{{ book.File }}">Download</a></th>
-                    </tr>
-                    {% endfor %}
-                </div>
-            </table>
-            {% else %}
-            {% if user.is_authenticated %}
-            <br>
-            <h1 style="text-align: center;"> No Materials Found So far :(</h1>
-            <div class="pt-5 text-center">
-                <a href="{% url 'add-item' %}" type='submit' class="btn btn-primary btn-lg">Click Here To Upload</a>
+                </tr>
             </div>
-
-            {% else %}
-
-            <h1 style="text-align: center;"> Please Login to Upload Materials</h1>
-            <div class="pt-5 text-center">
-                <a href="{% url 'login' %}" type='submit' class="btn btn-primary btn-lg">Login</a>
+            <p></p>
+            <div>
+                {% for book in books %}
+                <tr>
+                    <th>{{ book.id }}</th>
+                    <th>{{ book.Subject }}</th>
+                    <th>{{ book.Book_Name }}</th>
+                    <th>{{ book.Group }}</th>
+                    <th>{{ book.Semester }}</th>
+                    <th>{{ book.Uploaded_By }}</th>
+                    <th>{{ book.Filesize }}</th>
+                    <th><a href="{{baseUrl}}/media/{{ book.File }}">Download</a></th>
+                </tr>
+                {% endfor %}
             </div>
-
-            {% endif %}
-            {% endif %}
+        </table>
+        {% else %}
+        {% if user.is_authenticated %}
+        <br>
+        <h1 style="text-align: center;"> No Materials Found So far :(</h1>
+        <div class="pt-5 text-center">
+            <a href="{% url 'add-item' %}" type='submit' class="btn btn-primary btn-lg">Click Here To Upload</a>
         </div>
+
+        {% else %}
+
+        <h1 style="text-align: center;"> Please Login to Upload Materials</h1>
+        <div class="pt-5 text-center">
+            <a href="{% url 'login' %}" type='submit' class="btn btn-primary btn-lg">Login</a>
+        </div>
+
+        {% endif %}
+        {% endif %}
     </section>
 
     <!-- Modal -->
@@ -172,7 +174,8 @@
                             <b style="color: firebrick;">Project Name : Online Resource Management</b><br><br>
                             19331A0573 : Kantubhukta Hemanth <br>
                             <a href="tel:9390858915"> Mobile No. : 9390858915 </a><br>
-                            G-Mail : <a href="mailto:hemanth680684@gmail.com?Subject=Hello%20Hemanth">hemanth680684@gmail.com</a>
+                            G-Mail : <a
+                                href="mailto:hemanth680684@gmail.com?Subject=Hello%20Hemanth">hemanth680684@gmail.com</a>
                         </center>
                     </p>
                 </div>

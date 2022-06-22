@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import *
+from accounts.views import *
 #from django.contrib.auth.forms import UserModel
 
 # Create your views here.
@@ -26,10 +27,10 @@ def upload(request):
         obj.Semester = request.POST['up_Semister']
         obj.Book_Name = request.POST['up_book']
         obj.Subject = request.POST['up_subject']
-        obj.Uploaded_By = request.POST['up_by']
+        obj.Uploaded_By =  request.user.first_name +" "+ request.user.last_name
         if len(request.FILES) != 0:
             obj.File = request.FILES['document']
-            obj.Filesize = str(len(obj.File))+' KB'
+            obj.Filesize = str("{:.3f}".format(len(obj.File)/1024))+' MB'
         obj.save()
     
     return render(request, 'upload.html')
