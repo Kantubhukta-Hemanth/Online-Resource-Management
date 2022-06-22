@@ -18,6 +18,13 @@
 
 <body>
 
+    <style>
+        body {
+            padding-top: 60px;
+        }
+    </style>
+
+
     <script>
 
         function validate_password() {
@@ -35,7 +42,7 @@
     </script>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark py-3">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-expand-md bg-dark navbar-dark py-3">
         <div class="container">
             <a href="/" class="navbar-brand">Online Resource Management</a>
 
@@ -68,8 +75,12 @@
                         <a href="{% url 'login' %}" class="nav-link">Login</a>
                     </li>
                     {% endif %}
-                    <li class="nav-item">
-                        <button onclick="darkmode()" class="nav-link bg-dark hide-border"> Dark mode </button>
+                    
+                    <li class="nav-item d-none d-lg-block d-xl-none">
+                        <a type="button" onclick="darkmode()" class="nav-link"> <i class="bi bi-circle-half h1"></i> </a>
+                    </li>
+                    <li class="nav-item .d-lg-none .d-xl-block">
+                        <a type="button" onclick="darkmode()" class="nav-link"> Dark mode </a>
                     </li>
                 </ul>
             </div>
@@ -78,9 +89,12 @@
 
     {% if user.is_authenticated %}
     <div>
+        <br>
         <a href="/" style="text-decoration: None;">
-            <h2>Hello <span class="text-danger">{{user.first_name}}!</span> Wellcome To Resource Management</h2>
+            <h2>Hello <span class="text-danger">{{user.first_name}}!</span></h2>
         </a>
+        
+        <br>
     </div>
 
     {% endif %}
@@ -88,17 +102,17 @@
 
     <!-- Showcase  -->
 
-    <section class="bg-black text-light p-3 p-lg-0 pt-lg-3 text-center text-sm-start">
+    <section class="bg-black text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
         <div class="container">
-            <div class="d-sm-flex">
-                <div class="align-items-center justify-content-between">
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <div>
                     <h1>Become an <span class="text-warning">
                             Explorer
                         </span></h1>
                     <p style="text-align: justify;">
                         Find all your Required Materials and books here.
                         And Tutorials on latest technologies with many Competative Resources
-                        for GATE, CAT, Interview Preparation right at one place.<a href="/"></a>
+                        for GATE, CAT, Interview Preparation right at one place.
                     </p>
                     </a>
                     <div style="text-align: center">
@@ -109,6 +123,7 @@
             </div>
         </div>
     </section>
+    
 
     <!-- Newsletter -->
     <section class="bg-primary text-light p-5">
@@ -261,8 +276,10 @@
                     <p>
                         <center>
                             *-*-*-*-*-*-*-*-*-*-<b style="color: firebrick;">Batch - 3-B</b>-*-*-*-*-*-*-*-*-*-*<br><br>
-                            <b style="color: firebrick;">Project Name : Online Library Management</b><br><br>
+                            <b style="color: firebrick;">Project Name : Online Resource Management</b><br><br>
                             19331A0573 : Kantubhukta Hemanth <br>
+                            <a href="tel:9390858915"> Mobile No. : 9390858915 </a><br>
+                            G-Mail : <a href="mailto:hemanth680684@gmail.com?Subject=Hello%20Hemanth">hemanth680684@gmail.com</a>
                         </center>
                     </p>
                 </div>
