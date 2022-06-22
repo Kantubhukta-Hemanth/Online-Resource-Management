@@ -1,10 +1,5 @@
-from email.headerregistry import Group
-from pkgutil import get_data
-from sre_constants import FAILURE
-from tokenize import group
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 from .models import *
-from django.contrib import messages
 #from django.contrib.auth.forms import UserModel
 
 # Create your views here.
