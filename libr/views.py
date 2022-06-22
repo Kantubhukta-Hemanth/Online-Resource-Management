@@ -20,7 +20,6 @@ def fetch(request):
     grp = request.POST['Group']
     sem = request.POST['Semister']
     books = items.objects.filter(Group=grp).filter(Semester=sem)
-    print(books)
 
 
     return render(request, 'class_sub/subjects.html', {'books': books})
