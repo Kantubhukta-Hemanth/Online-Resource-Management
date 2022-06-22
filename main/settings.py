@@ -14,6 +14,7 @@ from pathlib import Path
 import os
 import mimetypes
 import django_heroku
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -90,6 +91,10 @@ DATABASES = {
         'Port': '5432'
     }
 }
+
+db_free_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_free_env)
+
 
 
 # Password validation
