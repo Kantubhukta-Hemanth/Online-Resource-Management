@@ -18,7 +18,19 @@
 
 <body>
 
+    <script>
+        function uploaded() {
+            window.alert("Resource Uploaded Successful");
+        }
+    </script>
+
     <style>
+        input {
+            font-weight: normal;
+            font-size: 25px;
+            width: 300px;
+        }
+        
         body {
             padding-top: 60px;
         }
@@ -58,27 +70,13 @@
         </div>
     </nav>
 
-    <style>
-        input {
-            font-weight: normal;
-            font-size: 25px;
-            width: 300px;
-        }
-    </style>
-
-    <script>
-        function uploaded() {
-            window.alert("Resource Uploaded Successful");
-        }
-    </script>
-
     <!-- Description -->
     <a href="/"></a>
     <div class="desc_image" style=" background-image: url('{% static 'image/desc.png' %}')"></div>
     <section class="p-lg-2">
         <div class="container">
-            <h3 class="align_center bg-secondary btn_look bg-info">--------------------Note--------------------</h2>
-                <p class="lead align_center text-warning bg-secondary">
+            <h3 class="align_center bg-secondary btn_look bg-info">Note</h2>
+                <p style="text-align: justify; text-indent:30px;" class="lead align_center text-warning bg-secondary">
                     Here we provide you all the Engineering Notes
                     for all the semester of B-Tech
                     THESE ENGINEERING NOTES ARE NOT OWNED BY ME,
