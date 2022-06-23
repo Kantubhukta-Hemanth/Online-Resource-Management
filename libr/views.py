@@ -30,7 +30,7 @@ def upload(request):
         obj.Uploaded_By =  request.user.first_name +" "+ request.user.last_name
         if len(request.FILES) != 0:
             obj.File = request.FILES['document']
-            obj.Filesize = str("{:.3f}".format(len(obj.File)/1024))+' MB'
+            obj.Filesize = str("{:.3f}".format(len(obj.File)/1048576))+' MB'
         obj.save()
     
     return render(request, 'upload.html')

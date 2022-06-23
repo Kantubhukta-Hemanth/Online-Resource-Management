@@ -41,7 +41,7 @@
             <button onclick="goback()" class="bg-dark hide-border navbar-brand">
                 <i class="navbar-nav bi bi-arrow-left-circle h1"></i>
             </button>
-            <a href="#" class="navbar-brand">Online Resource Management</a>
+            <a href="/" class="navbar-brand">Online Resource Management</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
                 <span class="navbar-toggler-icon"></span>
@@ -88,7 +88,7 @@
     <div class="desc_image" style="background-image: url('{% static 'image/desc.png' %}'" )></div>
     <section class="p-lg-2">
         <div class="container">
-            <h3 class="align_center bg-secondary btn_look bg-info">--------------------Note--------------------</h3>
+            <h2 class="align_center bg-secondary btn_look bg-info">Note</h2>
             <p class="lead align_center text-warning bg-secondary">
                 Here we provide you all the Engineering Notes
                 for all the semester of B-Tech
@@ -108,9 +108,9 @@
             <hr>
         </p>
         {% if books %}
-        <table width="100%" class="table table-bordered table-hover">
+        <table width="100%" class="table table-bordered table-hover" cellspacing="0">
             <div>
-                <tr style="color:orangered; z-index:1;">
+                <tr style="color:orangered; z-index:1; background-color:aliceblue">
                     <th>S.No</th>
                     <th>Subject</th>
                     <th>Book_Name</th>
